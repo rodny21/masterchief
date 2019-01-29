@@ -1,0 +1,112 @@
+#simpleform {
+	width: 600px;
+	/*border: 2px solid grey;*/
+	padding: 14px;
+	margin-left: 40%;
+	/*position: absolute;*/
+
+
+}
+#simpleform label {
+	font-size:15px;
+	/*float:left;*/
+	font-family: Arial;
+	width:300px;
+	text-align:center;
+	/* margin-left: 25%; */
+	display:block;
+}
+#simpleform span {
+	font-size:11px;
+	color:grey;
+	width:100px;
+	text-align:right;
+	display:block;
+}
+#simpleform input {
+	border:1px solid #606060;
+	font-family:verdana;
+	border-radius: 15px;
+	font-size:14px;
+	color:grey;
+	height:24px;
+	width:250px;
+	box-shadow: 0 0 20px #6b6b6b;
+	/*margin: 0 0 20px 10px;*/
+}
+
+#simpleform button {
+	clear:both;
+	margin-left:250px;
+	background:rgb(99, 99, 99);
+	/* color:#FFFFFF; */
+	/* border:solid 1px yellow; */
+	font-size:16px;
+	box-shadow: 0 0 20px #ff4449;
+	text-shadow: 0 0 30px #fff;
+}
+
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+.form-sidnin .form-signin-heading,
+.form-singnin .checkbox{
+	margin-bottom: 10px
+}
+.form-signin .fom-control {
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+	width: 250px;
+	height: 30px;
+	background-color: rgb(200, 198, 198);
+	border: 1px solid rgb(245, 54, 54);
+	border-radius: 2px;
+	color: black;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+.form-signin input[type="password"] {
+	width: 250px;
+	height: 30px;
+background-color: rgb(200, 198, 198);
+	border: 1px solid rgb(245, 54, 54);
+	border-radius: 2px;
+	color: black;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+.submit{
+	width: 260px;
+height: 35px;
+background: rgb(249, 121, 113);
+border: 1px solid #ddd5d5;
+cursor: pointer;
+border-radius: 2px;
+color: #060606;
+font-family: 'Exo', sans-serif;
+font-size: 16px;
+font-weight: 400;
+padding: 6px;
+margin-top: 10px;
+}
+/* body {
+	background: url('http://cuteweblinks.info/images/Colombia-Wallpapers/Colombia-Wallpapers-26.jpg');
+	} */

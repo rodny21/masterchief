@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    {{ parent() }}
+    <a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+
+
+
+                {{ form_start(formulario) }}
+                <div id="simpleform"  class="container-fluid">
+                    <label for="">Carrera</label>
+                    {{ form_widget(formulario.carrera) }}
+                    <label for="">Duracion</label>
+                    {{ form_widget(formulario.duracion) }}
+                    <label for="">Pensul</label>
+                    {{ form_widget(formulario.pensul) }}
+                    <br><br>
+
+                        {{ form_widget(formulario.subir, { 'attr': {'class' : 'btn btn-success'}}) }}
+
+
+
+                <div/>
+
+
+                {{ form_end(formulario) }}
+
+
+
+
+{% endblock %}

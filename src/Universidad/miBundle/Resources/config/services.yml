@@ -1,0 +1,4 @@
+services:
+#    universidadmi.example:
+#        class: Universidad\miBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

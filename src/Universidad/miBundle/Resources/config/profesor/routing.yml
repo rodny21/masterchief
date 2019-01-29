@@ -1,0 +1,11 @@
+profesor_nuevo:
+    path:     /nuevo
+    defaults: { _controller: UniversidadmiBundle:Profesor:nuevo }
+
+profesor_lista:
+    path:     /lista
+    defaults: { _controller: UniversidadmiBundle:Profesor:lista }
+
+profesor_ajax:
+    path:     /ajax/{id}
+    defaults: { _controller: UniversidadmiBundle:Profesor:ajax }

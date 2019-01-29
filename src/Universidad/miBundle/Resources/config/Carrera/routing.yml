@@ -1,0 +1,11 @@
+carrera_nuevo:
+    path:     /carrera
+    defaults: { _controller: UniversidadmiBundle:Carrera:nuevo }
+
+carrera_lista:
+    path:     /lista
+    defaults: { _controller: UniversidadmiBundle:Carrera:lista }
+
+carrera_ver:
+    path:     /ver/{id}
+    defaults: { _controller: UniversidadmiBundle:Carrera:ver }

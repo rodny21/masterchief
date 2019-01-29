@@ -1,0 +1,83 @@
+
+.centar{
+    width:1200px;
+
+    position:absolute;
+
+    left:50%;
+
+    margin-left:-500px;
+}
+.imag{
+    width: 100%;
+    height: 50%;
+}
+.caja{
+    /*border: 1px solid black;*/
+    margin-right: 36%;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    /*padding: 10px;*/
+    /*margin: 10px;*/
+    /* border-radius: 25%; */
+    /* padding-bottom: 10%; */
+    float: right;
+}
+.im{
+    height: 100px;
+    width: 100px;
+    /* overflow:hidden; */
+}
+.caja1{
+    margin-left: 30%;
+    /*border: 1px solid black;*/
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    /* padding-top: 10%; */
+    /* overflow: hidden; */
+}
+.caja4{
+    margin-left: 35%;
+    /*border: 1px solid black;*/
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    /*padding-top: 10%;*/
+}
+.caja2{
+    margin-left: 63%;
+    /*border: 1px solid black;*/
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding-top: 5%;
+    /* margin-right: 30%; */
+}
+table {
+   width: 100%;
+   /* border: 1px solid gray; */
+}
+th, td {
+   /* width: 25%; */
+   text-align: center;
+   vertical-align: top;
+   /* border: 1px solid #000; */
+   border-collapse: collapse;
+   padding: 0.3em;
+   caption-side: bottom;
+}
+th {
+   background: #282828;
+   color: white;
+}
+.caja3{
+    margin-left: 45%;
+    /* float: left; */
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    /* padding-top: 5%; */
+}

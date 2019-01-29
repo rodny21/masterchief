@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body -%}
+{{ parent() }}
+  <a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+
+    <h2 align="center"> Carrera</h2>
+    <br>
+    <table class="table table-dark" >
+        <thead >
+            <tr>
+                <th>Id</th>
+                <th>Carrera</th>
+                <th>Duracion</th>
+                <th>Pensul</th>
+            </tr>
+        </thead>
+        {% for Datos in Datos %}
+
+        <tbody>
+
+            <tr>
+                <td>{{ Datos.id }}</td>
+                <td>{{ Datos.carrera }}</td>
+                <td>{{ Datos.duracion }}</td>
+                <td><a href="{{ asset('../Pensul/Carrera/'~Datos.pensul)}}">Ver Pensul</a> </td>
+            </tr>
+
+        </tbody>
+      {% endfor %}
+
+    </table>
+
+{% endblock %}

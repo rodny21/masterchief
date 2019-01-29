@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+      <title>{% block title %}Universidad{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{absolute_url( asset('public/css/bootstrap.css') )}}">
+            <link rel="stylesheet" href="{{absolute_url( asset('public/css/style.css') )}}">
+            <link rel="stylesheet" href="{{absolute_url (asset('public/css/signin.css') )}}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="" />
+    </head>
+
+    <div class="centar">
+    <body >
+
+
+
+        {% block body %}
+            <div class="panel text-center text-danger"><img class="imag" src="{{ asset('public/imagenes/banne.png') }}" alt=""></div>
+            {{ include('manu.html.twig')}}
+            <div class="body">
+            </div>
+
+
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('public/js/jquery.js') }}"></script>
+            <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+
+
+    </body>
+
+    </div>
+
+</html>

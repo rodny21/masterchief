@@ -1,0 +1,3 @@
+unidad_nuevo:
+    path:     /nuevo
+    defaults: { _controller: UniversidadmiBundle:Unidad:nuevo }

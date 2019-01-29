@@ -1,0 +1,7 @@
+estudiante_nuevo:
+    path:     /nuevo
+    defaults: { _controller: UniversidadmiBundle:Estudiante:nuevo }
+
+estudiante_lista:
+    path:     /lista
+    defaults: { _controller: UniversidadmiBundle:Estudiante:lista }

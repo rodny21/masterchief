@@ -1,0 +1,27 @@
+universidadmi:
+    resource: "@UniversidadmiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+universidadmi_carrera:
+    resource: "@UniversidadmiBundle/Resources/config/Carrera/routing.yml"
+    prefix:   /carrera
+
+universidadmi_estudiante:
+    resource: "@UniversidadmiBundle/Resources/config/Estudiante/routing.yml"
+    prefix:   /estudiante
+
+universidadmi_profesor:
+    resource: "@UniversidadmiBundle/Resources/config/profesor/routing.yml"
+    prefix:   /profesor
+
+universidadmi_unidad:
+    resource: "@UniversidadmiBundle/Resources/config/Unidad/routing.yml"
+    prefix:   /unidad
+
+universidadmi_usuario:
+    resource: "@UniversidadmiBundle/Resources/config/Usuario/routing.yml"
+    prefix:   /usuario
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

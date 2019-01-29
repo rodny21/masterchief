@@ -1,0 +1,26 @@
+universidadmi_homepage:
+    path:     /index
+    defaults: { _controller: UniversidadmiBundle:Default:index }
+
+universidadmi_pdf:
+    path:     /pdf
+    defaults: { _controller: UniversidadmiBundle:Default:pdf }
+
+universidadmi_login:
+    path:     /login
+    defaults: { _controller: UniversidadmiBundle:Security:login }
+
+universidadmi_login_check:
+    path:    /login_check
+    defaults: { _controller: UniversidadmiBundle:Security:logincheck }
+
+universidadmi_home:
+    path:     /home
+    defaults: { _controller: UniversidadmiBundle:Security:home }
+
+universidadmi_logout:
+    path:     /logout
+
+universidadmi_buscar:
+    path:     /buscar/
+    defaults: { _controller: UniversidadmiBundle:Default:buscar }

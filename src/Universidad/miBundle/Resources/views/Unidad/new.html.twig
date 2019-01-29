@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+    {{ parent() }}
+    <a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+
+    {{ form_start(Form) }}
+   <div id="simpleform"  class="container-fluid">
+                      <label for="">Carrera</label>
+                      {{form_widget(Form.carrera)}}
+                      <label for="">Unida Curricular</label>
+                      {{form_widget(Form.unidadCurricular)}}
+                      <label for="">U.C</label>
+                      {{form_widget(Form.puntos)}}
+                      <label for="">Semestres</label>
+                      {{form_widget(Form.semestre)}}
+                      <br><br>
+                      {{form_widget(Form.subir,{'attr': {'class':'btn btn-success'}})}}
+                </div>
+
+{{ form_end(Form) }}
+
+
+{% endblock %}

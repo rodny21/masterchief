@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+    {{ parent() }}
+    <a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+
+    <div>
+                    <div class="transparente">
+                        <div class="margin-none" align="center">
+                            <h2 class="padding-none">Listado</h2>
+                        </div>
+                        <div >
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+
+                                    <th>Carrera</th>
+                                    <th>Unidad Curricular</th>
+                                    <th>Grado de Instruccion</th>
+
+                                </tr>
+                                </thead>
+                                {% for Datos in Datos %}
+                                    <tbody>
+                                    <tr class="active">
+                                        <td>{{ Datos.carrera}}</td>
+                                        <td>{{ Datos.duracion}}</td>
+
+                                        <td><a href="{{path('carrera_ver',{id:Datos.id})}}" class="btn btn-mx btn-info" > Unidad Curricular</a> </td>
+
+                                    </tr>
+                                    </tbody>
+
+
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+{% endblock %}

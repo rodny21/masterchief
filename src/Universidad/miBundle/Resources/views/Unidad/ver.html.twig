@@ -1,0 +1,15 @@
+{%  extends 'base.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+        {% for unidades in unidad  %}
+          <div class="container well caja3" style="filter:alpha(opacity=80); opacity:0.8;">
+          <center>
+          {{unidades.semestre}}
+          <br>
+            {{ unidades}}
+            </center>
+                </div>
+        {% endfor %}
+{% endblock %}

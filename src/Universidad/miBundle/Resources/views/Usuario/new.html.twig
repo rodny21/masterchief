@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    {{ parent() }}
+    <a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+
+
+
+                {{ form_start(Form) }}
+                <div id="simpleform"  class="container-fluid">
+                    <label for="">Nombre de Usuario</label>
+                    {{ form_widget(Form.username) }}
+                    <label for="">Contraseña</label>
+                    {{ form_widget(Form.password) }}
+                    <label for="">Rol</label>
+                    {{ form_widget(Form.rol) }}
+                    <label for="">Activo</label>
+                    {{ form_widget(Form.isActive)}}
+                    <br><br>
+
+                        {{ form_widget(Form.subir, { 'attr': {'class' : 'btn btn-success'}}) }}
+
+
+
+                <div/>
+
+
+                {{ form_end(Form) }}
+
+
+
+
+{% endblock %}

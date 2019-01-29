@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="38fb8adb-3687-4603-aa34-30c1f59e5625" name="Reporte" url="http://192.168.3.103">
+        <fileTransfer host="192.168.3.103" port="22" rootFolder="/var/www/corresponsalia2018" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

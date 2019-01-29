@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+    {{ parent() }}
+    <a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+
+    <div>
+                    <div class="transparente">
+                        <div class="margin-none" align="center">
+                            <h2 class="padding-none">Listado</h2>
+                        </div>
+                        <div >
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+
+                                    <th>Cedula</th>
+                                    <th>Periodo Academico</th>
+                                    <th>Fecha NAcimiento</th>
+                                    <th>Carrera</th>
+                                    <th>Foto</th>
+
+                                </tr>
+                                </thead>
+                                {% for Datos in Datos %}
+                                    <tbody>
+                                    <tr class="active">
+                                        <td>{{ Datos.nombre}}</td>
+                                        <td>{{ Datos.apellido}}</td>
+
+                                        <td>{{ Datos.cedula}}</td>
+                                        <td>{{ Datos.periodoAcademico}}</td>
+                                        <td>{{ Datos.fechaNacimientoAt|date('d-m-Y')  }}</td>
+                                        <td>{{Datos.carrera}}</td>
+                                        <td><img class="fot" src="{{ asset('../Foto/Estudiante/' ~ Datos.foto)}}" alt=""> </td>
+
+                                    </tr>
+                                    </tbody>
+
+
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+{% endblock %}

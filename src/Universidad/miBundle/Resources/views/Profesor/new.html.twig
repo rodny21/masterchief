@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript">
+
+
+if($( "#form_carrera").val()!="")
+muestraEstado($( "#form_carrera").val())
+// alert("hola");
+
+
+$( "#form_carrera" ).change(function() {
+muestraEstado($(this).val())
+// alert($(this).val());
+});
+
+function muestraEstado(id){
+var valMunicipio=null;
+if($( "#form_unidadCurricular").val()!=""){
+valMunicipio =$("#form_unidadCurricular").val()
+
+}
+
+var url='{{ path('profesor_ajax',{'id':'dato1'})}}';
+url=url.replace("dato1",id)
+$('#form_unidadCurricular').html('<option value="" >.</option>');
+
+$.ajax({
+url: url,
+// type: 'POST',
+dataType: 'json',
+success: function(respuesta){
+
+var options='';
+for(var i=1;i<respuesta.options.length;i++){
+var data=respuesta.options[i].split("-");
+
+if(data[1]==valMunicipio)
+options +='<option  value="'+data[1]+'"">'+data[0]+'</option>';
+else
+options +='<option value="'+data[1]+'"">'+data[0]+'</option>';
+}
+$('#form_unidadCurricular').html(options);
+
+$("#form_unidadCurricular").trigger("chosen:updated");
+$('#form_unidadCurricular').removeAttr("disabled")
+}
+});
+}
+</script>
+{% endblock %}
+{% block body %}
+
+{{ parent()}}
+<a href="{{path('universidadmi_homepage')}}"><img class="ima" src="{{ asset('public/imagenes/flecha.png')}}" alt=""> </a>
+
+
+{{ form_start(Form) }}
+<div id="simpleform" class="container-fluid">
+                  <label for="">Nombre</label>
+                  {{form_widget(Form.nombre)}}
+                  <label for="">Apellido</label>
+                  {{form_widget(Form.apellido)}}
+                  <label for="">Carrera</label>
+                  {{form_widget(Form.carrera)}}
+                  <label for="">Grado de Instruccion</label>
+                  {{form_widget(Form.gradoInstruccion)}}
+                  <label for="">Unidad Curricular</label>
+                  {{form_widget(Form.unidadCurricular)}}
+                  <br><br>
+                  {{form_widget(Form.subir,{'attr': {'class':'btn btn-success'}})}}
+
+    </div>
+
+{{ form_end(Form) }}
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('public/css/signin.css')}}">
+{% endblock %}
+{% block body %}
+{# {{ parent() }}/ #}
+<div class="panel text-center text-danger"><img class="imag" src="{{ asset('public/imagenes/banne.png') }}" alt=""></div>
+
+<div align="center">
+<div class="container">
+  <form class="form-signin" action="{{ path('universidadmi_login_check')}}" method="post">
+    <h2 class="form-signin-heading">Inicio de sesion</h2>
+
+    <label for="username" class="sr-only"> Username </label>
+    <input type="text" id="username" value="{{ last_username }}" class="form-control"  name="_username" placeholder="USUARIO" required autofocus />
+
+    <label for="password" class="sr-only">Contraseña </label>
+    <input type="password" id="password" name="_password" class="form-control" placeholder="CONTRASEÑA" required/ >
+
+    <input type="hidden" name="_target_path" value="universidadmi_home" />
+
+    <button type="submit" name="button" class="submit ">ENTRAR</button>
+  </form>
+</div>
+</div>
+{% endblock %}
